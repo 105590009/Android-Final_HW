@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:src="@drawable/img11" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/img12" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:src="@drawable/img13" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_toLeftOf="@+id/imageView5"
+        android:adjustViewBounds="true"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/img21" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/imageView2"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/img22" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_toRightOf="@+id/imageView5"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/img23" />
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_toLeftOf="@+id/imageView8"
+        android:adjustViewBounds="true"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/img31" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/imageView5"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/img32" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_toRightOf="@+id/imageView8"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:maxHeight="120dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/img33" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:maxHeight="360dp"
+        android:maxWidth="240dp"
+        android:src="@drawable/combine" />
+
+    <Button
+        android:id="@+id/combine_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView1"
+        android:layout_marginBottom="50dp"
+        android:text="COMBINE"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/refresh_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_alignTop="@+id/combine_button"
+        android:text="Refresh"
+        android:textStyle="bold" />
+
+</RelativeLayout>

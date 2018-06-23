@@ -1,48 +1,54 @@
 package com.example.ntut;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
-
+    private MainGame mainGame;
+    private Puzzle puzzle;
+    private int playerWin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(
+                getSupportFragmentManager());
 
+        // 設定 ViewPager 和 Pager Adapter.
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mainGame = new MainGame();
+        puzzle = new Puzzle();
     }
+
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public SectionsPagerAdapter(FragmentManager fm){
+        public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
-        public Fragment getItem(int position){
+        public Fragment getItem(int position) {
             Fragment fragment = null;
 
-            switch (position){
+            // 根據目前tab標籤頁的位置，傳回對應的fragment物件
+            switch (position) {
                 case 0:
-                    fragment = new Game();
+                    fragment = mainGame;
                     break;
                 case 1:
-                    fragment = new Stage1();
-                    break;
-                case 2:
-                    fragment = new Stage2();
+                    fragment = puzzle;
                     break;
             }
+
             return fragment;
         }
 
@@ -52,17 +58,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public CharSequence getPageTitle(int position){
-            switch (position){
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
                 case 0:
-                    return "主遊戲區";
+                    return "主遊戲";
                 case 1:
-                    return "關卡圖片(一)";
-                case 2:
-                    return "關卡圖片(二)";
+                    return "戰利品";
                 default:
                     return null;
             }
         }
+    }
+    public int getmPlayerWin(){
+        return playerWin;
+    }
+    public void setmPlayerWin(int mPlayerWin){
+        this.playerWin = mPlayerWin;
     }
 }
